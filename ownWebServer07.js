@@ -10,6 +10,7 @@
 //step 1: to acquire or require http webser.
 
 const http = require("http");
+const fs = require("fs");
 
 const server= http.createServer((req,res)=>{  //request and response as parameter.
     //console.log(req.url);
@@ -24,7 +25,7 @@ const server= http.createServer((req,res)=>{  //request and response as paramete
     }
     else if(req.url == "/contact"){
         res.end("hello from the contact side");
-    }
+    }   
     else{
         res.writeHead(404)
         res.end("500 error page doesn't exist");
