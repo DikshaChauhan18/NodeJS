@@ -1,0 +1,13 @@
+express is a node js framework.
+
+most popular on NPM.
+
+expressJs is a web application framework that provide you with a simple API to build Website,web app and backend.
+
+time saving.
+
+fast.
+
+same as nodejs but efficient and better way.
+
+
