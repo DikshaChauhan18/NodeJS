@@ -21,3 +21,6 @@ console.log("hi");
 app.listen(3000,()=>{
     console.log("listening");
 })
+
+
+//same for responsive web.
