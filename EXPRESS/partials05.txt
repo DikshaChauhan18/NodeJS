@@ -1,0 +1,1 @@
+Partials are code blocks that are reused many times in an application. 
