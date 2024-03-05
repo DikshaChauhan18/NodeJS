@@ -143,3 +143,92 @@ getDocument();
 
 
 // LOgical Operator
+//$and $not $nor $or  
+/*
+//or
+const getDocument = async () =>{
+    const result = await studentModel
+    .find({$or :[{name:"diksha"},{course:"ME"}]})
+    console.log(result);
+}
+
+getDocument();
+*/
+
+
+//SORTING AND COUNTING
+/*
+//counting
+const getDocument = async () =>{
+    const result = await studentModel
+    .find()
+    .select({name:1})
+    .countDocuments();
+    console.log(result);
+}
+getDocument();
+*/
+/*
+//sorting
+
+const getDocument = async () =>{
+    const result = await studentModel
+    .find()
+    .select({name:1})
+    .sort({name:1})  //1 : ascending  //-1 descending
+    console.log(result); 
+}
+getDocument();
+*/
+
+
+//UPDATION:
+/*
+const updateDocument = async (_id) =>{
+    try{
+        const result= await studentModel.updateOne({_id },{$set : {name:"xyz"}});
+        console.log(result);
+    }
+    
+    catch(err){console.log(err);}
+    
+}
+updateDocument("65e5574c2c57afefb6d827ba");
+
+*/
+//similarly updateMany
+
+
+
+//DELETION
+
+/*
+const deleteDocument = async (_id) =>{
+    try{
+        const result = await studentModel.deleteOne({_id});
+        console.log(result);
+    }
+    catch(err)
+    {
+        console.log(err);
+    }
+}
+
+deleteDocument("65e5574c2c57afefb6d827b9");
+*/
+const deleteDocument = async (_id) =>{
+    try{
+        const result = await studentModel.findByIdAndDelete({_id});   //it will give detail of obj that is being deleted. 
+        //same we can use for udate to show details in terminal. it will give the record that is stored in db not the updates one.
+        
+        console.log(result);
+    }
+    catch(err)
+    {
+        console.log(err);
+    }
+}
+
+deleteDocument("65e554d26b4ee1a54ee725f6");
+
+//also have del many.
