@@ -1,0 +1,39 @@
+//*************** STARTING MONGODB *******************//
+
+using in cmd : command =>  mongosh
+
+for showing database  : show dbs
+current database name : db
+
+
+creating or using new or existing database: use database_name
+
+//INSERT
+inserting value single: db.field_name.insertOne("insert value") :eg:  db.data.insertOne({name:"node",type:"Backend"})
+insertMany in mongodb :  db.data.insertMany([{name:"reactjs",type:"frontend"},{name:"express",type:"backend"}])
+
+
+
+
+it is case sensitive.
+
+
+//READ
+for showning collections(table) : show collections   (here it is data)
+document(data) in that collection :  db.data.find()
+
+db.collection.find(query,projection)   :eg:  db.data.find({name:"node"})
+
+db.data.find({name:"node"},{name:1}) =>show id and name (id is default)
+db.data.find({name:"node"},{name:0})  =>show things except name
+
+ db.data.find({name:"node"},{_id:0,name:1}) =>only name
+
+//UPdate
+
+single : db.table_name.updateOne(<filter>,<update>)
+many :   db.data.updateMany(<filter>,<update>)
+
+//DELETE
+
+db.table_name.deleteMany(deletion_criteria)
