@@ -1,1 +1,10 @@
 Partials are code blocks that are reused many times in an application. 
+for ex headers are used many times.
+
+
+ADDING ERROR PAGE IN WEBSITE:
+app.get("*",(req,res)=>{
+    res.render("404",{
+        errorcomment: "OOPS Page Cannot be found",
+    });
+});
