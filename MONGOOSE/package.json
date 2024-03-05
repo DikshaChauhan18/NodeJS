@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "mongoose": "^8.2.0"
+  },
+  "name": "mongoose",
+  "version": "1.0.0",
+  "description": "learning mongoose",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "diksha",
+  "license": "ISC"
+}
